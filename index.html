@@ -22,16 +22,20 @@
     <header class="text-red-500">asasda</header>
 
     <!-- get connected -->
-    <section class="bg-[] overflow-x-hidden">
+    <section
+      class="bg-[linear-gradient(180deg,_rgba(238,255,200,0.00)_0%,_#E9FFB6_100%)] overflow-x-hidden"
+    >
       <div class="bg-bottom bg-no-repeat bg-contain bg-newsletter-banner">
-        <div class="">
+        <div class="container">
           <div
-            class="flex lg:flex-row flex-col lg:item-center justify-between gap-7.5"
+            class="flex lg:flex-row flex-col lg:items-center justify-between gap-7.5"
           >
             <div
-              class="max-w-[1280px] w-full order-1 lg:order-0 animate-left-right"
+              class="max-w-[598px] w-full order-1 lg:order-0 animate-left-right"
             >
-              <div class="bg-[('/BT-Ascent/img-Ascent/egg-shap.png')]">
+              <div
+                class="bg-[url('/assets/images/shapes/egg-shap.png')] bg-no-repeat bg-bottom bg-contain"
+              >
                 <img
                   src="../img-Ascent/student.png"
                   alt="student-img"
@@ -39,13 +43,37 @@
                 />
               </div>
             </div>
-            <div></div>
+            <div class="lg:max-w-[530px] order-0 lg:order-1">
+              <p
+                class="font-bubblegum-sans text-[19px] text-muted-foreground wow"
+              >
+                Get Connected
+              </p>
+              <h2
+                class="font-bold lg:text-[32px] md:text-[28px] text-2xl lg:leading-[130%] md:leading-[120%] leading-[110%]"
+              >
+                Education That Sparks Imaginat Nurturing Curiosity Inspire
+              </h2>
+              <div class="relative lg:mt-10 mt-5">
+                <input
+                  type="text"
+                  placeholder="Enter Your Email"
+                  class="rounded-[10px] border border-black pl-6 lg:py-7 py-4 max-h-20 w-full outline-none"
+                />
+                <button
+                  class="bg-primary text-cream-foreground rounded-[10px] absolute right-[10px] top-1/2 -translate-y-1/2 btn"
+                >
+                  <span>Submit</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="pt-[70px] relative">
+    <footer class="pt-[70px] relative bg-white py-15 px-10 sm:px-4 lg:px-6">
       <div class="">
         <div
           class="grid lg:grid-cols-[370px_auto_auto] sm:grid-cols-2 grid-cols-1 justify-between gap-7.5"
