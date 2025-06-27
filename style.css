@@ -1,6 +1,7 @@
 .container {
     max-width: 1280px;
     margin: 0 90px 0 90px;
+    align-items: center;
 }
 
 .bubblegum-sans-regular {
@@ -8,3 +9,5 @@
   font-weight: 400;
   font-style: normal;
 }
+
+
