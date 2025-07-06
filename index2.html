@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent - Childcare & Kids School HTML Template</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    
+    <!-- Essential Libraries -->
+    <link href="./src/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-nunito overflow-x-hidden">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 transition-all duration-500 z-50 bg-white/95 backdrop-blur-md shadow-lg">
+        <div id="header-container">
+            <!-- Top Header -->
+            <div id="top-header" class="bg-gradient-to-r from-[#ED145B] to-[#F7941E] sm:block hidden overflow-hidden relative">
+                <div class="absolute inset-0 bg-pattern opacity-10"></div>
+                <div class="max-w-[1280px] mx-auto relative z-10">
+                    <div class="flex lg:flex-row flex-col justify-between items-center gap-2 py-3 px-4">
+                        <div class="text-white">
+                            <ul class="flex gap-6 lg:gap-8">
+                                <li class="animate-slide-in-left">
+                                    <a href="" class="text-white flex items-center gap-2 hover:text-amber-200 transition-all duration-300 transform hover:scale-105">
+                                        <span class="animate-pulse"><i class="fa-solid fa-phone"></i></span> 
+                                        <span>(629) 555-0129</span>
+                                    </a>
+                                </li>
+                                <li class="animate-slide-in-left animation-delay-200">
+                                    <a href="" class="text-white flex items-center gap-2 hover:text-amber-200 transition-all duration-300 transform hover:scale-105">
+                                        <span class="animate-pulse animation-delay-100"><i class="fa-solid fa-envelope"></i></span> 
+                                        <span>info@example.com</span>
+                                    </a>
+                                </li>
+                                <li class="animate-slide-in-left animation-delay-400 hidden lg:block">
+                                    <p class="text-white flex items-center gap-2">
+                                        <span class="animate-pulse animation-delay-200"><i class="fa-solid fa-location-dot"></i></span> 
+                                        <span>6391 Elgin St. Celina, 10299</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="flex items-center gap-3 text-white">
+                                <li class="animate-bounce-in animation-delay-300">
+                                    <a href="" class="social-icon-top">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="animate-bounce-in animation-delay-400">
+                                    <a href="" class="social-icon-top">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="animate-bounce-in animation-delay-500">
+                                    <a href="" class="social-icon-top">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="animate-bounce-in animation-delay-600">
+                                    <a href="" class="social-icon-top">
+                                        <i class="fa-brands fa-pinterest-p"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <div class="bg-white shadow-lg transition-all duration-500 hover:shadow-xl">
+                <div class="max-w-[1280px] mx-auto py-4 px-4">
+                    <div class="flex justify-between items-center">
+                        <!-- Logo -->
+                        <div class="animate-slide-in-left">
+                            <a href="index.html" class="flex items-center gap-2 group">
+                                <img src="./images/logo.png" alt="Logo" class="w-10 h-10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                                <span class="font-bold text-2xl lg:text-3xl text-gray-800 group-hover:text-[#ED145B] transition-all duration-500 group-hover:scale-105">Ascent</span>
+                            </a>
+                        </div>
+
+                        <!-- Desktop Navigation -->
+                        <nav class="xl:block hidden">
+                            <ul class="flex items-center gap-6">
+                                <li class="nav-item animate-fade-in-down animation-delay-100">
+                                    <a href="#" class="nav-link group">
+                                        Home 
+                                        <i class="fa-solid fa-angle-down text-sm group-hover:rotate-180 transition-transform duration-300 ml-1"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.html" class="dropdown-link">Home-1</a></li>
+                                        <li><a href="index-2.html" class="dropdown-link">Home-2</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item animate-fade-in-down animation-delay-200">
+                                    <a href="about.html" class="nav-link">About Us</a>
+                                </li>
+                                <li class="nav-item animate-fade-in-down animation-delay-300">
+                                    <a href="#" class="nav-link group">
+                                        Services 
+                                        <i class="fa-solid fa-angle-down text-sm group-hover:rotate-180 transition-transform duration-300 ml-1"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="services.html" class="dropdown-link">Services</a></li>
+                                        <li><a href="service-details.html" class="dropdown-link">Service Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item animate-fade-in-down animation-delay-400">
+                                    <a href="#" class="nav-link group">
+                                        Blog 
+                                        <i class="fa-solid fa-angle-down text-sm group-hover:rotate-180 transition-transform duration-300 ml-1"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="blog.html" class="dropdown-link">Blog</a></li>
+                                        <li><a href="blog-details.html" class="dropdown-link">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item animate-fade-in-down animation-delay-500">
+                                    <a href="#" class="nav-link group">
+                                        Pages 
+                                        <i class="fa-solid fa-angle-down text-sm group-hover:rotate-180 transition-transform duration-300 ml-1"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="about.html" class="dropdown-link">About</a></li>
+                                        <li><a href="services.html" class="dropdown-link">Services</a></li>
+                                        <li><a href="portfolio.html" class="dropdown-link">Portfolio</a></li>
+                                        <li><a href="faq.html" class="dropdown-link">FAQ</a></li>
+                                        <li><a href="contact.html" class="dropdown-link">Contact</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item animate-fade-in-down animation-delay-600">
+                                    <a href="contact.html" class="nav-link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Mobile Menu Button -->
+                        <button id="mobile-menu-btn" class="xl:hidden block text-gray-600 hover:text-[#ED145B] transition-all duration-300 p-2 relative">
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+
+                        <!-- Action Buttons -->
+                        <div class="flex items-center gap-4 animate-fade-in-right">
+                            <button class="search-btn text-gray-600 hover:text-[#ED145B] transition-all duration-300 hover:scale-110 relative">
+                                <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                                <div class="search-ripple"></div>
+                            </button>
+                            <a href="#" class="cta-button hidden sm:flex">
+                                <span>Get A Quote</span>
+                                <i class="fa-solid fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="xl:hidden fixed right-0 top-0 w-80 h-full bg-gradient-to-br from-[#FFF0E5] to-white transform translate-x-full transition-all duration-500 z-50 shadow-2xl">
+                <div class="p-6 h-full overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <a href="#" class="flex items-center gap-2">
+                            <img src="./images/logo.png" alt="Logo" class="w-8 h-8">
+                            <span class="font-bold text-xl">Ascent</span>
+                        </a>
+                        <button id="mobile-menu-close" class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    
+                    <nav class="mobile-nav">
+                        <ul class="space-y-2">
+                            <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Home</a></li>
+                            <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                            <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Services</a></li>
+                            <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Blog</a></li>
+                            <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Pages</a></li>
+                            <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="mt-8">
+                        <a href="#" class="cta-button w-full justify-center">
+                            Get A Quote <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gradient-to-br from-[#FFF0E5] via-[#FFF8F0] to-[#FFEDE5] pt-20 pb-16 relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+            <div class="floating-shape shape-5"></div>
+        </div>
+
+        <div class="max-w-[1280px] mx-auto px-4 relative z-10">
+            <div class="text-center relative">
+                <!-- Main Title with Advanced Animation -->
+                <h1 class="hero-title font-normal text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight max-w-4xl mx-auto mb-6">
+                    <span class="relative animate-text-reveal">
+                        Exploring Minds 
+                        <span class="absolute -left-6 top-1 text-3xl text-[#ED145B] animate-star-twinkle">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                    </span>
+                    <span class="font-bold animate-text-reveal animation-delay-300">Elementary</span> 
+                    <span class="font-bold text-[#ED145B] animate-text-reveal animation-delay-600 relative">
+                        School
+                        <div class="text-underline"></div>
+                    </span>
+                </h1>
+                
+                <!-- Animated Decorative Shapes -->
+                <div class="absolute right-20 top-14 animate-float-shapes hidden lg:block">
+                    <div class="flex gap-1">
+                        <div class="shape-bar bar-1"></div>
+                        <div class="shape-bar bar-2"></div>
+                        <div class="shape-bar bar-3"></div>
+                    </div>
+                </div>
+                
+                <!-- Description with Typewriter Effect -->
+                <p class="text-gray-600 text-lg mt-6 max-w-md mx-auto animate-fade-in-up animation-delay-900">
+                    <span class="typewriter" data-text="Starting a corporate business typically involves several steps, such as developing a business"></span>
+                </p>
+                
+                <!-- CTA Button with Magnetic Effect -->
+                <div class="mt-8 animate-fade-in-up animation-delay-1200">
+                    <a href="#" class="cta-button-hero magnetic-btn">
+                        <span>Learn More</span>
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                        <div class="button-bg"></div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Images with Advanced Animations -->
+            <div class="absolute left-4 top-16 animate-float-complex hidden lg:block">
+                <div class="hero-image-container">
+                    <img src="./images/boy_img_1.png" alt="Student 1" class="w-48 rounded-full border-4 border-[#F7941E] hero-image">
+                    <div class="image-glow glow-orange"></div>
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                </div>
+            </div>
+            
+            <div class="absolute right-4 bottom-16 animate-float-complex animation-delay-500 hidden lg:block">
+                <div class="hero-image-container">
+                    <img src="./images/boy_img_2.png" alt="Student 2" class="w-48 rounded-full border-4 border-[#1CBBB4] hero-image">
+                    <div class="image-glow glow-teal"></div>
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                </div>
+            </div>
+            
+            <!-- Main Hero Image -->
+            <div class="mt-16 animate-fade-in-up animation-delay-1000 relative">
+                <img src="./images/painting.png" alt="Painting" class="mx-auto max-w-full hover:scale-105 transition-transform duration-700">
+                <div class="image-shadow"></div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-4">
+            <div class="grid xl:grid-cols-2 lg:grid-cols-[40%_auto] grid-cols-1 gap-12 items-center">
+                <div class="animate-slide-in-left">
+                    <p class="text-[#F7941E] font-semibold text-lg mb-4 animate-fade-in-up">Number Talks</p>
+                    <h2 class="font-bold text-3xl lg:text-4xl leading-tight max-w-md mb-6 animate-fade-in-up animation-delay-200">
+                        Invest in education invest in the future
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed animate-fade-in-up animation-delay-400">
+                        Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem.
+                        Imperdiet massa turpis sit proin metus volutpat lorem ipsum Lorem ipsum dolor sit amet
+                        consectetur. Amet lectus mi ultricies dictum
+                    </p>
+                    <button class="btn-outline animate-fade-in-up animation-delay-600">Get a quote</button>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 grid-cols-1 gap-6">
+                    <div class="stat-card animate-scale-in animation-delay-200" data-aos="fade-up">
+                        <div class="stat-icon bg-[#F7941E]">
+                            <img src="./icons/kindergarden.png" alt="Icon" class="w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="stat-number" data-target="20">0</h4>
+                            <p class="stat-label">Running Students</p>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" data-progress="85"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card animate-scale-in animation-delay-400" data-aos="fade-up">
+                        <div class="stat-icon bg-[#ED145B]">
+                            <img src="./icons/book.png" alt="Icon" class="w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="stat-number" data-target="13">0</h4>
+                            <p class="stat-label">Completed</p>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" data-progress="75"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card animate-scale-in animation-delay-600" data-aos="fade-up">
+                        <div class="stat-icon bg-[#73BE48]">
+                            <img src="./icons/blocks.png" alt="Icon" class="w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="stat-number" data-target="3">0</h4>
+                            <p class="stat-label">Award Winning</p>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" data-progress="95"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card animate-scale-in animation-delay-800" data-aos="fade-up">
+                        <div class="stat-icon bg-[#1CBBB4]">
+                            <img src="./icons/book.png" alt="Icon" class="w-8 h-8">
+                        </div>
+                        <div>
+                            <h4 class="stat-number" data-target="13">0</h4>
+                            <p class="stat-label">Guardian Satisfaction</p>
+                        </div>
+                        <div class="stat-progress">
+                            <div class="progress-bar" data-progress="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-4">
+            <div class="grid lg:grid-cols-[60%_40%] grid-cols-1 items-center gap-12">
+                <div class="relative animate-slide-in-left">
+                    <div class="flex sm:flex-row flex-col sm:items-end gap-6">
+                        <div class="relative">
+                            <div class="mb-4 animate-bounce-slow">
+                                <img src="./images/shap-1.png" alt="Shape" class="floating-decoration">
+                            </div>
+                            <div class="ml-9 relative">
+                                <img src="./images/about-1.png" alt="About" class="w-full rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="flex sm:flex-col gap-6">
+                            <div class="about-card bg-gradient-to-br from-[#FFF0E5] to-[#FFE5D9] hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                <img src="./images/icreement.png" alt="Achievement" class="w-12 h-12 mx-auto mb-3 animate-pulse">
+                                <h6 class="text-xl font-bold mb-2">Academy</h6>
+                                <p class="text-gray-600">Learning Ladder School</p>
+                            </div>
+                            <div class="about-card bg-white shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                <h6 class="text-3xl font-bold text-[#1CBBB4] mb-2 counter-number" data-target="10">0</h6>
+                                <p class="text-gray-600">Learning Ladder School</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-in-right">
+                    <p class="text-[#1CBBB4] font-semibold text-lg mb-4 animate-fade-in-up">About Us</p>
+                    <h2 class="font-bold text-3xl lg:text-4xl leading-tight mb-6 animate-fade-in-up animation-delay-200">
+                        Unlocking Potential, One Child at a Time in school
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed animate-fade-in-up animation-delay-400">
+                        Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis
+                        sem. Imperdiet massa turpis sit proin metus volutpat lorem ipsum Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum
+                    </p>
+                    <a href="contact.html" class="btn-outline animate-fade-in-up animation-delay-600">Get a quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Programs Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-4">
+            <div class="text-center mb-16">
+                <p class="text-[#73BE48] font-semibold text-lg mb-4 animate-fade-in-up">Educational Programs</p>
+                <h2 class="font-bold text-3xl lg:text-4xl leading-tight max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+                    Strong Foundation for Success For Nurturing Curiosity
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-8 lg:gap-12">
+                <div class="program-card animate-scale-in animation-delay-300" data-aos="fade-up">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-car text-2xl"></i>
+                        <div class="icon-ripple"></div>
+                    </div>
+                    <div class="program-content">
+                        <h4 class="program-title">Online Class</h4>
+                        <p class="program-description">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit platea the, osr of a proin mollis pretium facilisi in, ligula volutpat
+                        </p>
+                        <a href="#" class="program-link">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="program-card animate-scale-in animation-delay-500" data-aos="fade-up">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-book text-2xl"></i>
+                        <div class="icon-ripple"></div>
+                    </div>
+                    <div class="program-content">
+                        <h4 class="program-title">Formal Tuition</h4>
+                        <p class="program-description">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit platea the, osr of a proin mollis pretium facilisi in, ligula volutpat
+                        </p>
+                        <a href="#" class="program-link">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="program-card animate-scale-in animation-delay-700" data-aos="fade-up">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                        <div class="icon-ripple"></div>
+                    </div>
+                    <div class="program-content">
+                        <h4 class="program-title">Preschool</h4>
+                        <p class="program-description">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit platea the, osr of a proin mollis pretium facilisi in, ligula volutpat
+                        </p>
+                        <a href="#" class="program-link">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                
+                <div class="program-card animate-scale-in animation-delay-900" data-aos="fade-up">
+                    <div class="program-icon">
+                        <i class="fa-solid fa-chalkboard-teacher text-2xl"></i>
+                        <div class="icon-ripple"></div>
+                    </div>
+                    <div class="program-content">
+                        <h4 class="program-title">Special Tuition</h4>
+                        <p class="program-description">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit platea the, osr of a proin mollis pretium facilisi in, ligula volutpat
+                        </p>
+                        <a href="#" class="program-link">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Decoration -->
+        <div class="absolute top-16 right-8 animate-float-decoration opacity-50 hidden lg:block">
+            <img src="./images/pencil-rocket.png" alt="Decoration" class="w-24 h-24 floating-rocket">
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-4">
+            <div class="text-center mb-16">
+                <p class="text-[#1CBBB4] font-semibold text-lg mb-4 animate-fade-in-up">Latest Portfolio</p>
+                <h2 class="font-bold text-3xl lg:text-4xl leading-tight max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+                    Exploring Minds Elementary School Education the only school
+                </h2>
+            </div>
+            
+            <!-- Portfolio Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="portfolio-tab active animate-scale-in animation-delay-300" data-target="education">Education</button>
+                <button class="portfolio-tab animate-scale-in animation-delay-400" data-target="school">School</button>
+                <button class="portfolio-tab animate-scale-in animation-delay-500" data-target="learn">Learn</button>
+                <button class="portfolio-tab animate-scale-in animation-delay-600" data-target="child">Child</button>
+                <button class="portfolio-tab animate-scale-in animation-delay-700" data-target="coaching">Coaching</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="portfolio-content">
+                <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-target="education">
+                    <div class="portfolio-item animate-scale-in animation-delay-300">
+                        <img src="./images/portfolio-1.png" alt="Portfolio 1" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content-inner">
+                                <h5 class="portfolio-title">Exploring Minds Elementary Best School</h5>
+                                <p class="portfolio-subtitle">Dreamland Elementary</p>
+                                <a href="#" class="portfolio-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-glow"></div>
+                    </div>
+                    
+                    <div class="portfolio-item animate-scale-in animation-delay-500">
+                        <img src="./images/portfolio-2.png" alt="Portfolio 2" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content-inner">
+                                <h5 class="portfolio-title">Exploring Minds Elementary Best School</h5>
+                                <p class="portfolio-subtitle">Dreamland Elementary</p>
+                                <a href="#" class="portfolio-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-glow"></div>
+                    </div>
+                    
+                    <div class="portfolio-item animate-scale-in animation-delay-700">
+                        <img src="./images/portfolio-3.png" alt="Portfolio 3" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content-inner">
+                                <h5 class="portfolio-title">Exploring Minds Elementary Best School</h5>
+                                <p class="portfolio-subtitle">Dreamland Elementary</p>
+                                <a href="#" class="portfolio-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-glow"></div>
+                    </div>
+                    
+                    <div class="portfolio-item animate-scale-in animation-delay-900">
+                        <img src="./images/portfolio-5.png" alt="Portfolio 4" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content-inner">
+                                <h5 class="portfolio-title">Exploring Minds Elementary Best School</h5>
+                                <p class="portfolio-subtitle">Dreamland Elementary</p>
+                                <a href="#" class="portfolio-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-glow"></div>
+                    </div>
+                    
+                    <div class="portfolio-item animate-scale-in animation-delay-1100">
+                        <img src="./images/portfolio-6.png" alt="Portfolio 5" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content-inner">
+                                <h5 class="portfolio-title">Exploring Minds Elementary Best School</h5>
+                                <p class="portfolio-subtitle">Dreamland Elementary</p>
+                                <a href="#" class="portfolio-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-glow"></div>
+                    </div>
+                    
+                    <div class="portfolio-item animate-scale-in animation-delay-1300">
+                        <img src="./images/portfolio-1.png" alt="Portfolio 6" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content-inner">
+                                <h5 class="portfolio-title">Exploring Minds Elementary Best School</h5>
+                                <p class="portfolio-subtitle">Dreamland Elementary</p>
+                                <a href="#" class="portfolio-button">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 relative bg-gradient-to-br from-[#FFF0E5] to-[#FFE5D9] lg:bg-transparent overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-4">
+            <div class="bg-gradient-to-br from-[#FFF0E5] to-[#FFE5D9] rounded-3xl p-8 lg:p-12 relative overflow-hidden shadow-2xl">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 bg-pattern opacity-5"></div>
+                
+                <div class="grid lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
+                    <!-- Left Content -->
+                    <div class="lg:col-span-1 animate-slide-in-left">
+                        <p class="text-[#1CBBB4] font-semibold text-lg mb-4">Latest Service</p>
+                        <h2 class="font-bold text-3xl lg:text-4xl mb-6">
+                            Building a Strong Foundation for Success
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit platea pharetra, nostra mattis hendrerit proin mollis pretium facilisi in, ligula volutpat
+                        </p>
+                        
+                        <!-- Service Navigation -->
+                        <div class="flex gap-2 mb-8">
+                            <button class="nav-dot active" data-slide="0"></button>
+                            <button class="nav-dot" data-slide="1"></button>
+                            <button class="nav-dot" data-slide="2"></button>
+                        </div>
+                        
+                        <a href="#" class="btn-outline border-[#1CBBB4] text-[#1CBBB4] hover:bg-[#1CBBB4] hover:text-white">
+                            Read More <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Right Services -->
+                    <div class="lg:col-span-2">
+                        <div class="swiper service-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="service-card">
+                                        <i class="fa-solid fa-graduation-cap service-icon"></i>
+                                        <h4 class="service-title">Learning School here us</h4>
+                                        <div class="service-footer">
+                                            <p class="service-description">Lorem ipsum dolor sit amet a the a conse adipiscing</p>
+                                            <a href="#" class="service-link">
+                                                <span>Read More</span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="service-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="service-card">
+                                        <i class="fa-solid fa-child service-icon"></i>
+                                        <h4 class="service-title">Learning in the School</h4>
+                                        <div class="service-footer">
+                                            <p class="service-description">Lorem ipsum dolor sit amet a the a conse adipiscing</p>
+                                            <a href="#" class="service-link">
+                                                <span>Read More</span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="service-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="service-card">
+                                        <i class="fa-solid fa-puzzle-piece service-icon"></i>
+                                        <h4 class="service-title">Stars Preschool our design</h4>
+                                        <div class="service-footer">
+                                            <p class="service-description">Lorem ipsum dolor sit amet a the a conse adipiscing</p>
+                                            <a href="#" class="service-link">
+                                                <span>Read More</span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="service-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">
+                                    <div class="service-card">
+                                        <i class="fa-solid fa-book-open service-icon"></i>
+                                        <h4 class="service-title">Stars Preschool our design</h4>
+                                        <div class="service-footer">
+                                            <p class="service-description">Lorem ipsum dolor sit amet a the a conse adipiscing</p>
+                                            <a href="#" class="service-link">
+                                                <span>Read More</span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="service-glow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Character -->
+        <div class="absolute left-8 bottom-8 animate-character-float hidden lg:block">
+            <img src="./images/man.png" alt="Character" class="w-24 h-36 floating-character">
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
